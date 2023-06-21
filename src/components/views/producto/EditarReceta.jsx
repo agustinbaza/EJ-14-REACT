@@ -105,19 +105,22 @@ const EditarReceta = () => {
             {errors.imagen?.message}
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formCategoria">
-          <Form.Label>Categoría</Form.Label>
-          <Form.Control
-            as="select"
-            {...register("categoria", { required: "La categoría es obligatoria" })}
+        <Form.Group className="mb-3" controlId="formPrecio">
+          <Form.Label>Categoria*</Form.Label>
+          <Form.Select
+            {...register("categoria", {
+              required: "La categoria es obligatoria",
+            })}
           >
-            <option value="">Selecciona una categoría</option>
-            <option value="Desayuno">Desayuno</option>
-            <option value="Almuerzo">Almuerzo</option>
-            <option value="Cena">Cena</option>
-          </Form.Control>
+            <option value="">Seleccione una opcion</option>
+            <option value="entrada">Entrada</option>
+            <option value="plato principal">Plato principal</option>
+            <option value="guarnicion">Guarnicion</option>
+            <option value="postre">Postre</option>
+          </Form.Select>
           <Form.Text className="text-danger">
             {errors.categoria?.message}
+            
           </Form.Text>
         </Form.Group>
         <Button variant="primary" type="submit">

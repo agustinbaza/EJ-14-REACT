@@ -8,7 +8,7 @@ const Inicio = () => {
     <section className="mainSection">
       <Container>
       <img
-        className="m-2 mb-5"
+        className="banner mb-4"
         src="https://thumbs.dreamstime.com/z/ingredientes-para-cocinar-libro-de-recetas-y-utensilios-cocina-banner-borde-ilustraci%C3%B3n-vectorial-elementos-vajilla-culinaria-233810583.jpg?w=992"
         alt="fondo cocina"
       />

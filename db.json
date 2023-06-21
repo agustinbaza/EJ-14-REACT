@@ -2,9 +2,9 @@
   "recetas": [
     {
       "nombreReceta": "Milanesa",
-      "tiempo": "20",
+      "tiempo": "15",
       "imagen": "https://pics.filmaffinity.com/Coco-286070381-large.jpg",
-      "categoria": "bebida fria",
+      "categoria": "plato principal",
       "id": 2
     }
   ],
