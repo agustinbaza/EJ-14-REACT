@@ -88,10 +88,10 @@ const CrearReceta = () => {
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="bebida caliente">Entrada</option>
-            <option value="bebida fria">Plato principal</option>
-            <option value="dulce">Guarnicion</option>
-            <option value="salado">Postre</option>
+            <option value="entrada">Entrada</option>
+            <option value="plato principal">Plato principal</option>
+            <option value="guarnicion">Guarnicion</option>
+            <option value="postre">Postre</option>
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.categoria?.message}
