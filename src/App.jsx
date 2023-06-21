@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Menu from "./components/common/Menu";
+import Inicio from "./components/views/Inicio";
+import Error404 from "./components/views/Error404";
+import Administrador from "../src/components/views/Administrador";
+import CrearReceta from "./components/views/producto/CrearReceta";
+import EditarReceta from "./components/views/producto/EditarReceta";
+import Footer from "./components/common/Footer";
+import DetalleReceta from "./components/views/DetalleReceta";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RutasAdministrador from "./components/routes/RutasAdministrador";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Menu></Menu>
+      <Routes>
+        <Route exact path="/" element={<Inicio></Inicio>}></Route>
+        <Route
+          exact
+          path="/administrador"
+          element={<Administrador></Administrador>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador/crear-receta"
+          element={<CrearReceta></CrearReceta>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador/editar-receta"
+          element={<EditarReceta></EditarReceta>}
+        ></Route>
+        <Route
+          exact
+          path="/detalle"
+          element={<DetalleReceta></DetalleReceta>}
+        ></Route>
+        <Route
+          path="/administrador/*"
+          element={<RutasAdministrador></RutasAdministrador>}
+        ></Route>
+        <Route exact path="*" element={<Error404></Error404>}></Route>
+      </Routes>
+
+      <Footer></Footer>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
