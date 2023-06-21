@@ -55,6 +55,27 @@ const CrearReceta = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
+          <Form.Label>Descripcion:</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Ej: Este plato contiene..."
+            {...register("descripcion", {
+              required: "La descripcion es obligatoria",
+              minLength: {
+                value: 5,
+                message: "La cantidad minima de caracteres es de 5 digitos",
+              },
+              maxLength: {
+                value: 150,
+                message: "La cantidad maxima de caracteres es de 150 digitos",
+              },
+            })}
+          />
+          <Form.Text className="text-danger">
+            {errors.descripcion?.message}
+          </Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formPrecio">
           <Form.Label>Tiempo de preparacion:</Form.Label>
           <Form.Control
             type="number"
@@ -92,10 +113,10 @@ const CrearReceta = () => {
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="entrada">Entrada</option>
-            <option value="plato principal">Plato principal</option>
-            <option value="guarnicion">Guarnicion</option>
-            <option value="postre">Postre</option>
+            <option value="Entrada">Entrada</option>
+            <option value="Plato principal">Plato principal</option>
+            <option value="Guarnicion">Guarnicion</option>
+            <option value="Postre">Postre</option>
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.categoria?.message}

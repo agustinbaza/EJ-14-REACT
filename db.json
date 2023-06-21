@@ -2,24 +2,43 @@
   "recetas": [
     {
       "nombreReceta": "Milanesa",
+      "descripcion": "Milanesa rebozada extra crocante",
       "tiempo": "15",
-      "imagen": "https://pics.filmaffinity.com/Coco-286070381-large.jpg",
-      "categoria": "guarnicion",
+      "imagen": "https://mui.kitchen/__export/1637269693052/sites/muikitchen/img/2021/11/18/maxresdefault_x2x.jpg_911186587.jpg",
+      "categoria": "Plato principal",
       "id": 2
     },
     {
       "nombreReceta": "Guiso de lentejas",
+      "descripcion": "Guiso ideal para el invierno",
       "tiempo": "60",
-      "imagen": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fouttec.com.ar%2Fproducto%2Fparlante-jbl-bluetooth-go3%2F&psig=AO.png",
-      "categoria": "plato principal",
+      "imagen": "https://www.cronica.com.ar/__export/1623862481404/sites/cronica/img/2021/06/16/guisodelentejas_crop1623861794431.jpg_1147012048.jpg",
+      "categoria": "Plato principal",
       "id": 3
     },
     {
       "nombreReceta": "Humita en olla",
+      "descripcion": "Humita en olla estilo casero",
       "tiempo": "120",
-      "imagen": "https://pics.filmaffinity.com/Coco-286070381-large.jpg",
-      "categoria": "plato principal",
+      "imagen": "https://www.lavoz.com.ar/resizer/xu-WC9hZammLAEiqwitdyqLTCZU=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/MEYGCOBZMZSWCNDGGFRWMYJVMY.jpg",
+      "categoria": "Plato principal",
       "id": 4
+    },
+    {
+      "nombreReceta": "Brownie con helado",
+      "descripcion": "Brownie tibio con helado de americana",
+      "tiempo": "40",
+      "imagen": "https://static.americadigital.com/wp-content/uploads/2020/11/americadigital_brownie_helado_5_2020.jpg",
+      "categoria": "Postre",
+      "id": 5
+    },
+    {
+      "nombreReceta": "Rabas ",
+      "descripcion": "Rabas al ajillo",
+      "tiempo": "45",
+      "imagen": "https://resizer.glanacion.com/resizer/3nt99_ylMk-F79q-GV-jUXIKxck=/768x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/XPIDRM7QZBC2VLPNNGGNAQMVUQ.jpg",
+      "categoria": "Entrada",
+      "id": 6
     }
   ],
   "usuarios": [

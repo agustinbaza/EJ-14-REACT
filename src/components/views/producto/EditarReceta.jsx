@@ -23,6 +23,7 @@ const EditarReceta = () => {
         console.log('Tengo que cargar el objeto en el formulario');
         console.log(respuesta);
         setValue('nombreReceta', respuesta.nombreReceta);
+        setValue('descripcion', respuesta.descripcion);
         setValue('tiempo', respuesta.tiempo);
         setValue('imagen', respuesta.imagen);
         setValue('categoria', respuesta.categoria);
@@ -71,6 +72,27 @@ const EditarReceta = () => {
             {errors.nombreReceta?.message}
           </Form.Text>
         </Form.Group>
+        <Form.Group className="mb-3" controlId="formDescripcion">
+          <Form.Label>Descripcion:</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Ej: Este plato contiene..."
+            {...register("descripcion", {
+              required: "La descripcion es obligatoria",
+              minLength: {
+                value: 5,
+                message: "La cantidad minima de caracteres es de 5 digitos",
+              },
+              maxLength: {
+                value: 150,
+                message: "La cantidad maxima de caracteres es de 150 digitos",
+              },
+            })}
+          />
+          <Form.Text className="text-danger">
+            {errors.descripcion?.message}
+          </Form.Text>
+        </Form.Group>
         <Form.Group className="mb-3" controlId="formTiempo">
           <Form.Label>Tiempo de preparación:</Form.Label>
           <Form.Control
@@ -113,10 +135,10 @@ const EditarReceta = () => {
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="entrada">Entrada</option>
-            <option value="plato principal">Plato principal</option>
-            <option value="guarnicion">Guarnicion</option>
-            <option value="postre">Postre</option>
+            <option value="Entrada">Entrada</option>
+            <option value="Plato principal">Plato principal</option>
+            <option value="Guarnicion">Guarnicion</option>
+            <option value="Postre">Postre</option>
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.categoria?.message}

@@ -41,12 +41,14 @@ const ItemReceta = ({ recetas, setRecetas }) => {
 
   return (
     <tr>
-      <td>{recetas.id}</td>
+      <td >{recetas.id}</td>
       <td>{recetas.nombreReceta}</td>
-      <td>{recetas.tiempo}</td>
-      <td>{recetas.imagen}</td>
+      <td>{recetas.tiempo} minutos</td>
+      <td style={{ maxWidth: "8rem", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+        {recetas.imagen}
+      </td>
       <td>{recetas.categoria}</td>
-      <td>
+      <td  className="d-flex justify-content-around">
         <Link className="btn btn-warning" to={`/administrador/editar-receta/${recetas.id}`}>
           Editar
         </Link>
