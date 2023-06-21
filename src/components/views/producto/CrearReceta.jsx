@@ -2,8 +2,10 @@ import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { consultaAgregarReceta } from "../../helpers/queries";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CrearReceta = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -15,7 +17,9 @@ const CrearReceta = () => {
     consultaAgregarReceta(recetaNueva).then((respuestaCreated) => {
       console.log(respuestaCreated);
       if (respuestaCreated && respuestaCreated.status === 201) {
-        Swal.fire('Receta creada', `La receta ${recetaNueva.nombreReceta} fue creada correctamente`, 'success');
+        Swal.fire('Receta creada', `La receta ${recetaNueva.nombreReceta} fue creada correctamente`, 'success').then(() => {
+          navigate('/administrador');
+        });
       } else {
         Swal.fire('Ocurrió un error', `La receta: ${recetaNueva.nombreReceta} no fue creada`, 'error');
       }
