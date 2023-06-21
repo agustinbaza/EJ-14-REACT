@@ -17,17 +17,23 @@ const CrearReceta = () => {
     consultaAgregarReceta(recetaNueva).then((respuestaCreated) => {
       console.log(respuestaCreated);
       if (respuestaCreated && respuestaCreated.status === 201) {
-        Swal.fire('Receta creada', `La receta ${recetaNueva.nombreReceta} fue creada correctamente`, 'success').then(() => {
-          navigate('/administrador');
+        Swal.fire(
+          "Receta creada",
+          `La receta ${recetaNueva.nombreReceta} fue creada correctamente`,
+          "success"
+        ).then(() => {
+          navigate("/administrador");
         });
       } else {
-        Swal.fire('Ocurrió un error', `La receta: ${recetaNueva.nombreReceta} no fue creada`, 'error');
+        Swal.fire(
+          "Ocurrió un error",
+          `La receta: ${recetaNueva.nombreReceta} no fue creada`,
+          "error"
+        );
       }
     });
   };
 
-
-  
   return (
     <section className="container mainSection">
       <h1 className="display-4 mt-5">Nueva receta</h1>
@@ -85,7 +91,7 @@ const CrearReceta = () => {
               min: {
                 value: 1,
                 message: "El tiempo minimo es de 1 min",
-              }
+              },
             })}
           />
           <Form.Text className="text-danger">
@@ -120,7 +126,6 @@ const CrearReceta = () => {
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.categoria?.message}
-            
           </Form.Text>
         </Form.Group>
         <Button variant="primary" type="submit">

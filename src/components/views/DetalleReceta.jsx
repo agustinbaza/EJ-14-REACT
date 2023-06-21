@@ -13,17 +13,24 @@ const DetalleReceta = () => {
           </Col>
           <Col md={6}>
             <Card.Body>
-              <Card.Title> <h1>  Pure de papas </h1> </Card.Title>
+              <Card.Title>
+                {" "}
+                <h1> Pure de papas </h1>{" "}
+              </Card.Title>
               <hr />
               <Card.Text>
-              Receta para pure de papas super cremoso con un toque de finas hierbas.
-              <br/>
-              <br/>
-              <span className="text-danger fw-semibold ">Categoria:</span> Guarnicion
-              <br />
-              <br />
-              
-              <span className="text-danger fw-semibold ">Tiempo:</span> 25min</Card.Text>
+                Receta para pure de papas super cremoso con un toque de finas
+                hierbas.
+                <br />
+                <br />
+                <span className="text-danger fw-semibold ">
+                  Categoria:
+                </span>{" "}
+                Guarnicion
+                <br />
+                <br />
+                <span className="text-danger fw-semibold ">Tiempo:</span> 25min
+              </Card.Text>
               <br />
             </Card.Body>
           </Col>

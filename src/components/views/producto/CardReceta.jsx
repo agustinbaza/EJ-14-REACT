@@ -12,7 +12,14 @@ const CardReceta = () => {
         <Card.Body>
           <Card.Title> Pure de papas </Card.Title>
           <Card.Text>TIEMPO DE PREPARACION: 25min.</Card.Text>
-        <Link variant="primary" className="text-decoration-none" to={'/detalle'}> <h5>Ver mas...</h5></Link>
+          <Link
+            variant="primary"
+            className="text-decoration-none"
+            to={"/detalle"}
+          >
+            {" "}
+            <h5>Ver mas...</h5>
+          </Link>
         </Card.Body>
       </Card>
     </Col>

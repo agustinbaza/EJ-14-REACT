@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import { consultaListaRecetas } from "../helpers/queries";
 import { Link } from "react-router-dom";
 
-
-
 const Administrador = () => {
   const [recetas, setRecetas] = useState([]);
 
@@ -26,7 +24,7 @@ const Administrador = () => {
       <hr />
       <Table responsive striped bordered hover>
         <thead>
-          <tr  className="text-center">
+          <tr className="text-center">
             <th>Cod</th>
             <th>Receta</th>
             <th>Tiempo (minutos)</th>

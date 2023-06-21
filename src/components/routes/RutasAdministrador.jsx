@@ -3,16 +3,11 @@ import Administrador from "../views/Administrador";
 import CrearReceta from "../views/producto/CrearReceta";
 import EditarReceta from "../views/producto/EditarReceta";
 
-
 const RutasAdministrador = () => {
   return (
     <>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={<Administrador></Administrador>}
-        ></Route>
+        <Route exact path="/" element={<Administrador></Administrador>}></Route>
         <Route
           exact
           path="/crear-receta"

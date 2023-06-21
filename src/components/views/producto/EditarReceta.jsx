@@ -11,7 +11,7 @@ const EditarReceta = () => {
     handleSubmit,
     formState: { errors },
     reset,
-    setValue
+    setValue,
   } = useForm();
 
   const { id } = useParams();
@@ -20,15 +20,15 @@ const EditarReceta = () => {
   useEffect(() => {
     consultaReceta(id).then((respuesta) => {
       if (respuesta) {
-        console.log('Tengo que cargar el objeto en el formulario');
+        console.log("Tengo que cargar el objeto en el formulario");
         console.log(respuesta);
-        setValue('nombreReceta', respuesta.nombreReceta);
-        setValue('descripcion', respuesta.descripcion);
-        setValue('tiempo', respuesta.tiempo);
-        setValue('imagen', respuesta.imagen);
-        setValue('categoria', respuesta.categoria);
+        setValue("nombreReceta", respuesta.nombreReceta);
+        setValue("descripcion", respuesta.descripcion);
+        setValue("tiempo", respuesta.tiempo);
+        setValue("imagen", respuesta.imagen);
+        setValue("categoria", respuesta.categoria);
       } else {
-        Swal.fire('Ocurrió un error', 'No se puede editar la receta', 'error');
+        Swal.fire("Ocurrió un error", "No se puede editar la receta", "error");
       }
     });
   }, [id, setValue]);
@@ -37,14 +37,21 @@ const EditarReceta = () => {
     console.log(recetaEditada);
     consultaEditarReceta(recetaEditada, id).then((respuesta) => {
       if (respuesta && respuesta.status === 200) {
-        Swal.fire('Producto editado', `El producto ${recetaEditada.nombreReceta} fue editado correctamente`, 'success');
-        navegacion('/administrador');
+        Swal.fire(
+          "Producto editado",
+          `El producto ${recetaEditada.nombreReceta} fue editado correctamente`,
+          "success"
+        );
+        navegacion("/administrador");
       } else {
-        Swal.fire('Ocurrió un error', `El producto: ${recetaEditada.nombreReceta} no fue editado`, 'error');
+        Swal.fire(
+          "Ocurrió un error",
+          `El producto: ${recetaEditada.nombreReceta} no fue editado`,
+          "error"
+        );
       }
     });
   };
-
 
   return (
     <section className="container mainSection">
@@ -103,7 +110,7 @@ const EditarReceta = () => {
               min: {
                 value: 1,
                 message: "El tiempo mínimo es de 1 minuto",
-              }
+              },
             })}
           />
           <Form.Text className="text-danger">
@@ -142,7 +149,6 @@ const EditarReceta = () => {
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.categoria?.message}
-            
           </Form.Text>
         </Form.Group>
         <Button variant="primary" type="submit">
