@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
+import {Link, NavLink, useNavigate} from 'react-router-dom';
 
 
 function Menu() {
@@ -9,12 +10,12 @@ function Menu() {
   return (
     <Navbar bg="primary" variant="dark" expand="lg" className="p-3">
       <Container>
-        <Navbar.Brand href="#home"> Blog de recetas</Navbar.Brand>
+        <Navbar.Brand as={Link} to='/'> Blog de recetas</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#" >Inicio</Nav.Link>
-            <Nav.Link href="#">Administrador</Nav.Link>
+            <NavLink end className={'nav-item nav-link'} to={'/'} >Inicio</NavLink>
+            <NavLink end className={'nav-item nav-link'} to={'/administrador'}>Administrador</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

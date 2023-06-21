@@ -1,8 +1,19 @@
 {
-    "recetas": [
-      { "id": 1, "nombreReceta": "Pure de papas", "descripcion": "pure de papas cremoso", "tiempo": 25, "categoria": "guarnicion", "imagen": ""}
-    ],
-    "usuarios": [
-      { "id": 1, "nombreUsuario": "admin", "email": "admin@rollingcode.com", "password": "123456aA" }
-    ]
-  }
+  "recetas": [
+    {
+      "nombreReceta": "Milanesa",
+      "tiempo": "20",
+      "imagen": "https://pics.filmaffinity.com/Coco-286070381-large.jpg",
+      "categoria": "bebida fria",
+      "id": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "admin@rollingcode.com",
+      "password": "123456aA"
+    }
+  ]
+}
